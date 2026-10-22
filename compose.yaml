@@ -1,0 +1,13 @@
+services:
+  rescue:
+    build: .
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      JWT_SECRET: ${JWT_SECRET:?Set a random secret of at least 32 characters}
+      COORDINATOR_PASSWORD: ${COORDINATOR_PASSWORD:?Set a password of at least 12 characters}
+      VIEWER_PASSWORD: ${VIEWER_PASSWORD:?Set a password of at least 12 characters}
+    volumes:
+      - rescue-data:/app/data
+volumes:
+  rescue-data:

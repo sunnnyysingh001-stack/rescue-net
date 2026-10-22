@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+target/
+data/
+.env
+*.tsbuildinfo
+.DS_Store
+
+node_modules
+frontend/public/source.zip
